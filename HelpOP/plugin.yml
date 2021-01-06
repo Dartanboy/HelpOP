@@ -1,0 +1,9 @@
+name: HelpOP
+version: 1.2.0
+api-version: 1.13
+author: Dartanman
+main: main.dartanman.helpop.Main
+commands:
+  helpop:
+    description: Contact staff for help!
+    usage: /<command>

@@ -1,0 +1,7 @@
+# HelpOP by Dartanman
+Message-Format: '&6[&9HelpOP&6] &c<player>&7: &f<message>'
+Permissions:
+  Use: helpop.use
+  Receive: helpop.receive
+No-Permission-Message: '&cInsufficient permissions.'
+Incorrect-Arguments-Message: '&cIncorrect args! Try /helpop <message>'
