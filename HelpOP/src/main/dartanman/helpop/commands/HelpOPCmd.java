@@ -1,3 +1,8 @@
+/**
+* CommandExecutor for the /helpop command.
+* @author Dartanman (Austin Dart)
+**/
+
 package main.dartanman.helpop.commands;
 
 import org.bukkit.Bukkit;
@@ -13,10 +18,28 @@ public class HelpOPCmd implements CommandExecutor{
 	
 	private Main plugin;
 	
+	/**
+	* Constructs the HelpOP Command Executor with an instance of the Main JavaPlugin for HelpOP.
+	* @param pl
+	*  instance of the Main JavaPlugin class
+	**/
 	public HelpOPCmd(Main pl) {
 		plugin = pl;
 	}
 	
+	/**
+	* Method that runs when a player does a command. Never returns false in HelpOP because I'd rather send my own error message, not Spigot's.
+	* @param sender
+	*  whoever/whatever sent the command
+	* @param cmd
+	*  the command that was run
+	* @param label
+	*  the alias of the command that was run
+	* @param args
+	*  array of arguments added to the end of the command that was run
+	* @return
+	*  the success state of the command - used to determine whether or not Spigot should send an error message to the sender
+	**/
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(!(sender.hasPermission(plugin.getConfig().getString("Permissions.Use")))) {
 			sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("No-Permission-Message")));
